@@ -62,13 +62,15 @@ const milestones = [
   },
 ];
 
-const colorMap: Record<string, string> = {
-  cyan:   'border-cyan-700   bg-cyan-950/30   text-cyan-300',
-  blue:   'border-blue-700   bg-blue-950/30   text-blue-300',
-  purple: 'border-purple-700 bg-purple-950/30 text-purple-300',
-  green:  'border-green-700  bg-green-950/30  text-green-300',
-  yellow: 'border-yellow-700 bg-yellow-950/30 text-yellow-300',
-  slate:  'border-slate-600  bg-slate-800/40  text-slate-300',
+type ColorKey = 'cyan' | 'blue' | 'purple' | 'green' | 'yellow' | 'slate';
+
+const colorMap: Record<ColorKey, { border: string; bg: string; text: string }> = {
+  cyan:   { border: 'border-cyan-700',   bg: 'bg-cyan-950/30',   text: 'text-cyan-300'   },
+  blue:   { border: 'border-blue-700',   bg: 'bg-blue-950/30',   text: 'text-blue-300'   },
+  purple: { border: 'border-purple-700', bg: 'bg-purple-950/30', text: 'text-purple-300' },
+  green:  { border: 'border-green-700',  bg: 'bg-green-950/30',  text: 'text-green-300'  },
+  yellow: { border: 'border-yellow-700', bg: 'bg-yellow-950/30', text: 'text-yellow-300' },
+  slate:  { border: 'border-slate-600',  bg: 'bg-slate-800/40',  text: 'text-slate-300'  },
 };
 
 const dotMap: Record<string, string> = {
@@ -98,7 +100,7 @@ export default function Timeline() {
 
           <div className="space-y-8">
             {milestones.map((m) => {
-              const style = colorMap[m.color] ?? colorMap.slate;
+              const style = colorMap[m.color as ColorKey] ?? colorMap.slate;
               const dot   = dotMap[m.color]   ?? dotMap.slate;
               return (
                 <div key={m.phase} className="flex gap-6 sm:gap-8">
@@ -108,9 +110,9 @@ export default function Timeline() {
                   </div>
 
                   {/* Card */}
-                  <div className={`flex-1 rounded-xl border p-5 ${style.split(' ').slice(0, 2).join(' ')}`}>
+                  <div className={`flex-1 rounded-xl border p-5 ${style.border} ${style.bg}`}>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-3">
-                      <span className={`text-xs font-mono font-semibold ${style.split(' ')[2]}`}>
+                      <span className={`text-xs font-mono font-semibold ${style.text}`}>
                         {m.date}
                       </span>
                       <span className="hidden sm:inline text-slate-600">·</span>
