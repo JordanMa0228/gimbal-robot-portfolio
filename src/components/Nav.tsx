@@ -6,8 +6,7 @@ const links = [
   { href: '#architecture', label: 'Architecture' },
   { href: '#timeline', label: 'Timeline' },
   { href: '#outcomes', label: 'Outcomes' },
-  { href: '#how-to-run', label: 'How to Run' },
-  { href: '#nda-guardrails', label: 'NDA Safe' },
+  { href: '#media', label: 'Demo' },
   { href: '#contact', label: 'Contact' },
 ];
 
