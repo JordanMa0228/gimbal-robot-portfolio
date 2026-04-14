@@ -4,9 +4,10 @@ const links = [
   { href: '#hero', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#architecture', label: 'Architecture' },
+  { href: '#timeline', label: 'Timeline' },
+  { href: '#outcomes', label: 'Outcomes' },
   { href: '#how-to-run', label: 'How to Run' },
-  { href: '#troubleshooting', label: 'Troubleshooting' },
-  { href: '#media', label: 'Media' },
+  { href: '#nda-guardrails', label: 'NDA Safe' },
   { href: '#contact', label: 'Contact' },
 ];
 

@@ -19,7 +19,9 @@ export default function Footer() {
               { href: '#hero', label: 'Home' },
               { href: '#about', label: 'About' },
               { href: '#architecture', label: 'Architecture' },
-              { href: '#how-to-run', label: 'How to Run' },
+              { href: '#timeline', label: 'Timeline' },
+              { href: '#outcomes', label: 'Outcomes' },
+              { href: '#nda-guardrails', label: 'NDA Safe' },
               { href: '#contact', label: 'Contact' },
             ].map((l) => (
               <a key={l.href} href={l.href} className="text-slate-500 hover:text-cyan-400 transition-colors">

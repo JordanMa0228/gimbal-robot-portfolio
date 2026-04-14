@@ -94,15 +94,16 @@ netlify deploy --prod
 
 ## 🗂️ Sections
 
-| Section         | Anchor           | Description                                            |
-|-----------------|------------------|--------------------------------------------------------|
-| Home            | `#hero`          | Project name + one-line pitch                         |
-| About           | `#about`         | Goals, scope (sim/control) vs future (hardware)        |
-| Architecture    | `#architecture`  | ROS 2 node graph, topics, control pipelines            |
-| How to Run      | `#how-to-run`    | Build, launch sim, manual takeover keys                |
-| Troubleshooting | `#troubleshooting` | Common errors and fixes                             |
-| Media           | `#media`         | GIF/screenshot placeholders                            |
-| Contact         | `#contact`       | Author info                                            |
+| Section         | Anchor             | Description                                            |
+|-----------------|--------------------|--------------------------------------------------------|
+| Home            | `#hero`            | Project name + one-line pitch                         |
+| About           | `#about`           | Goals, scope (sim/control) vs future (hardware)        |
+| Architecture    | `#architecture`    | ROS 2 node graph, topics, control pipelines            |
+| Timeline        | `#timeline`        | Project milestones from kickoff to handoff             |
+| Outcomes        | `#outcomes`        | Key results, metrics, and achievements                 |
+| How to Run      | `#how-to-run`      | Build, launch sim, manual takeover keys                |
+| NDA Safe        | `#nda-guardrails`  | What is and is not shared publicly                     |
+| Contact         | `#contact`         | Author info                                            |
 
 ---
 
@@ -112,6 +113,20 @@ netlify deploy --prod
 - **React 19** — UI library
 - **TypeScript** — type safety
 - **Tailwind CSS v4** — utility-first styling
+
+---
+
+## 🔒 NDA-Safe Guidance
+
+This portfolio is scoped to **publicly shareable** information only:
+
+- ✅ High-level architecture, node graph, and topic map
+- ✅ Algorithm concepts (PID, mode arbitration, safety filtering)
+- ✅ Operational instructions and project timeline/outcomes
+- ❌ No proprietary code, internal docs, or private repo links
+- ❌ No employer/client names, unreleased product details, or raw sensor data
+
+If you are unsure whether something is safe to share, omit it.
 
 ---
 
