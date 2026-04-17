@@ -32,7 +32,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-600">
-          © {year} Jordan Ma · Internship Project ·{' '}
+          © {year} Yangyang Ma · Internship Project ·{' '}
           <a
             href="https://github.com/JordanMa0228/gimbal-robot-portfolio"
             target="_blank"
