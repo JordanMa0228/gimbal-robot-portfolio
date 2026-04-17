@@ -54,7 +54,7 @@ const keyFeatures = [
 export default function About() {
   return (
     <section id="about" className="bg-slate-900/50 border-y border-slate-800">
-      <div className="section-container">
+      <div id="project-overview" className="section-container">
         <div className="text-center mb-14">
           <span className="badge bg-cyan-950 text-cyan-400 border border-cyan-800 mb-4">About</span>
           <h2 className="section-title">Project Overview</h2>

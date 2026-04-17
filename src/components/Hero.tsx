@@ -44,7 +44,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#how-to-run"
+            href="#project-overview"
             className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-8 py-3 rounded-lg transition-colors duration-200"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
