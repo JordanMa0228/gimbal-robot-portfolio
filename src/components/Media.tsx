@@ -1,4 +1,7 @@
 export default function Media() {
+  const releaseTagUrl = 'https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/tag/demo_v0.1.0';
+  const demoVideoUrl = 'https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/download/demo_v0.1.0/Final.Demo.Video.mp4';
+
   return (
     <section id="media" className="bg-slate-900/50 border-y border-slate-800">
       <div className="section-container">
@@ -15,21 +18,27 @@ export default function Media() {
         <div className="mb-12">
           <h3 className="text-white text-lg font-semibold mb-3 text-center">Simulation Demo</h3>
           <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-700 bg-slate-800/60 shadow-lg">
-            {/*
-              Replace the src below with your YouTube or Vimeo embed URL, e.g.:
-                YouTube:  https://www.youtube.com/embed/<VIDEO_ID>
-                Vimeo:    https://player.vimeo.com/video/<VIDEO_ID>
-            */}
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="AI-Powered Ground Gimbal Robot — Simulation Demo"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <video
+              className="absolute inset-0 w-full h-full object-cover"
+              controls
+              preload="metadata"
+              src={demoVideoUrl}
+            >
+              Your browser does not support embedded video.{' '}
+              <a href={demoVideoUrl} className="text-cyan-400 underline">
+                Open the demo video.
+              </a>
+            </video>
           </div>
           <p className="mt-3 text-slate-400 text-sm text-center">
             Autonomous tracking demo — gimbal robot following a moving target in Gazebo Classic simulation.
+          </p>
+          <p className="mt-1 text-slate-500 text-xs text-center">
+            If playback is blocked, use the{' '}
+            <a href={demoVideoUrl} className="text-cyan-400 hover:text-cyan-300 underline">
+              direct video link
+            </a>
+            .
           </p>
         </div>
 
@@ -37,66 +46,67 @@ export default function Media() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Screenshot 1 */}
           <figure className="card flex flex-col gap-3">
-            <div className="w-full aspect-video bg-slate-800/60 rounded-lg border border-dashed border-slate-700 flex flex-col items-center justify-center">
-              {/* Replace with: <img src="/media/sim-overview.png" alt="Gazebo simulation overview showing the gimbal robot and red tracking target" className="w-full h-full object-cover rounded-lg" /> */}
-              <span className="text-3xl mb-2">🖼️</span>
-              <span className="text-xs text-slate-500 font-mono">sim-overview.png</span>
-              <span className="text-xs text-slate-600 mt-1">— place image in public/media/ —</span>
-            </div>
+            <img
+              src="https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/download/demo_v0.1.0/Stationary.Tracking.png"
+              alt="Stationary colored object tracking in Gazebo with the gimbal robot locked on target"
+              className="w-full aspect-video object-cover rounded-lg border border-slate-700"
+              loading="lazy"
+            />
             <figcaption className="text-slate-400 text-sm leading-relaxed">
-              <strong className="text-slate-300">Gazebo simulation overview</strong> — gimbal robot and red-box
-              tracking target in the Gazebo Classic environment.
+              <strong className="text-slate-300">Stationary tracking</strong> — gimbal robot maintaining lock on
+              a stationary colored target in Gazebo Classic.
             </figcaption>
           </figure>
 
           {/* Screenshot 2 */}
           <figure className="card flex flex-col gap-3">
-            <div className="w-full aspect-video bg-slate-800/60 rounded-lg border border-dashed border-slate-700 flex flex-col items-center justify-center">
-              {/* Replace with: <img src="/media/ros2-node-graph.png" alt="ROS 2 node graph showing topic connections between tracking, motion, and safety nodes" className="w-full h-full object-cover rounded-lg" /> */}
-              <span className="text-3xl mb-2">🖼️</span>
-              <span className="text-xs text-slate-500 font-mono">ros2-node-graph.png</span>
-              <span className="text-xs text-slate-600 mt-1">— place image in public/media/ —</span>
-            </div>
+            <img
+              src="https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/download/demo_v0.1.0/Circulating.Tracking.png"
+              alt="Circulating target tracking demo showing gimbal stabilization while target moves through the scene"
+              className="w-full aspect-video object-cover rounded-lg border border-slate-700"
+              loading="lazy"
+            />
             <figcaption className="text-slate-400 text-sm leading-relaxed">
-              <strong className="text-slate-300">ROS 2 node graph</strong> — topic connections between the
-              tracking, motion control, and safety filter nodes.
+              <strong className="text-slate-300">Circulating tracking</strong> — autonomous tracking stays stable
+              while the target circulates and disturbances are introduced.
             </figcaption>
           </figure>
 
           {/* Screenshot 3 */}
           <figure className="card flex flex-col gap-3">
-            <div className="w-full aspect-video bg-slate-800/60 rounded-lg border border-dashed border-slate-700 flex flex-col items-center justify-center">
-              {/* Replace with: <img src="/media/manual-handover.png" alt="Manual/Auto mode handover — operator switching control mode mid-run" className="w-full h-full object-cover rounded-lg" /> */}
-              <span className="text-3xl mb-2">🖼️</span>
-              <span className="text-xs text-slate-500 font-mono">manual-handover.png</span>
-              <span className="text-xs text-slate-600 mt-1">— place image in public/media/ —</span>
-            </div>
+            <img
+              src="https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/download/demo_v0.1.0/Manual.Keyboard.Base.Control.png"
+              alt="Manual keyboard base control mode while maintaining camera tracking behavior"
+              className="w-full aspect-video object-cover rounded-lg border border-slate-700"
+              loading="lazy"
+            />
             <figcaption className="text-slate-400 text-sm leading-relaxed">
-              <strong className="text-slate-300">Manual / Auto handover</strong> — operator switching control mode
-              mid-run while the gimbal maintains target lock.
+              <strong className="text-slate-300">Manual base control</strong> — operator keyboard control of
+              the robot base with tracking behavior preserved.
             </figcaption>
           </figure>
 
           {/* Screenshot 4 */}
           <figure className="card flex flex-col gap-3">
-            <div className="w-full aspect-video bg-slate-800/60 rounded-lg border border-dashed border-slate-700 flex flex-col items-center justify-center">
-              {/* Replace with: <img src="/media/safety-filter.png" alt="Safety filter engaged — robot decelerating as it approaches a simulated obstacle" className="w-full h-full object-cover rounded-lg" /> */}
-              <span className="text-3xl mb-2">🖼️</span>
-              <span className="text-xs text-slate-500 font-mono">safety-filter.png</span>
-              <span className="text-xs text-slate-600 mt-1">— place image in public/media/ —</span>
-            </div>
+            <img
+              src="https://github.com/JordanMa0228/gimbal-robot-portfolio/releases/download/demo_v0.1.0/Obstacle.Avoidance.png"
+              alt="Obstacle avoidance engaged during active target tracking in the simulation"
+              className="w-full aspect-video object-cover rounded-lg border border-slate-700"
+              loading="lazy"
+            />
             <figcaption className="text-slate-400 text-sm leading-relaxed">
-              <strong className="text-slate-300">Safety filter engaged</strong> — robot decelerating as it
-              approaches a simulated obstacle; safe velocity commands enforced.
+              <strong className="text-slate-300">Obstacle avoidance</strong> — robot safely avoids obstacles while
+              continuing target tracking in simulation.
             </figcaption>
           </figure>
         </div>
 
-        {/* Tip for adding real media */}
         <p className="mt-10 text-center text-slate-500 text-sm">
-          To add real media, place files in <code className="text-slate-400">public/media/</code> and
-          uncomment the <code className="text-slate-400">&lt;img&gt;</code> tags (or update the iframe <code className="text-slate-400">src</code>) in{' '}
-          <code className="text-slate-400">src/components/Media.tsx</code>.
+          Media is sourced from the{' '}
+          <a href={releaseTagUrl} className="text-cyan-400 hover:text-cyan-300 underline">
+            demo_v0.1.0 GitHub Release
+          </a>
+          .
         </p>
       </div>
     </section>
