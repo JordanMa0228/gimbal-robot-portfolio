@@ -57,7 +57,7 @@ export default function About() {
       <div className="section-container">
         <div className="text-center mb-14">
           <span className="badge bg-cyan-950 text-cyan-400 border border-cyan-800 mb-4">About</span>
-          <h2 className="section-title">Project Overview</h2>
+          <h2 id="project-overview" className="section-title">Project Overview</h2>
           <p className="section-subtitle max-w-3xl mx-auto">
             An AI-powered autonomous robot cameraman — simulated in Gazebo Classic with ROS 2 Humble.
             The simulation-first approach establishes a complete control architecture before hardware integration.
